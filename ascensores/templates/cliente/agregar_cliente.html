@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Agregar Cliente</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'cliente/css/estilos.css' %}">
+    
+</head>
+<body>
+    <div class="clienteForm">
+        <form action="http://localhost:8000/cliente/" method="post">
+            <label for="nombre " id="l_nombre"> Ingrese Nombre :</label>
+            <input type="text" name="nombre" id="i_nombre" required><br>
+            <label for="direccion" id="l_direccion"> Ingrese Direccion</label>
+            <input type="text" id="i_direccion" required><br>
+            <label for="ciudad" id="l_ciudad"> Ciudad</label>
+            <input type="text" id="i_ciudad" required><br>
+            <label for="comuna" id="l_comuna">comuna</label>
+            <input type="text" id="i_comuna" required><br>
+            <label for="telefono" id="l_telefono">Telefono</label>
+            <input type="text" id="i_telefono"><br>
+            <label for="correo" id="l_correo">Correo</label>
+            <input type="email" id="i_correo" required><br>
+        </form>
+        
+        <button id="btnenviar" type="submit"> enviar</button>
+
+    </div>
+    <script type="text/javascript" src="{% static 'cliente/js/main.js' %}"></script>
+</body>
+</html>

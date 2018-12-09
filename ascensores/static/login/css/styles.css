@@ -1,0 +1,30 @@
+body{
+
+    background-color: darkseagreen;
+}
+.contenedor{
+
+    margin-top: 300px;
+    margin-left:100px;
+    margin-right: 50%;
+    display: list-item;
+
+    
+    flex: auto;
+    background-color: coral;
+
+}
+
+.contenedor .btnlogin{
+
+    text-decoration:none;
+    font-weight:600;
+    font-size:20px;
+    color:#ffffff;
+    padding:15px 50px;
+    background-color:#005BBB;
+    text-align: center;
+    flex: auto;
+    display: block;
+
+}

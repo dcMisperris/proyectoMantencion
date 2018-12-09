@@ -1,0 +1,17 @@
+.clienteForm{
+
+    margin: 150px 400px 50px 400px;
+    padding: 40px 30px;
+    background-color: lightcoral;
+}
+.clienteForm #btn_enviar{
+
+    background-color:rgb(146, 110, 11);
+    font-family: 'Lucida Sans';
+    font-weight: 400;
+    color:white;
+    padding: 20px 40px;
+    margin-left: 150px;
+    margin-top: 50px; 
+
+}
