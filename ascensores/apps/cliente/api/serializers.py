@@ -7,6 +7,9 @@ class ClienteSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
         
+#class RegistroClienteSerializer(serializers.ModelSerializer):
+    
+
         #read_only_fields = ['id', 'correo']
 
     # def create(self, validated_data):

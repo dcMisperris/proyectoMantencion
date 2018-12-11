@@ -17,7 +17,7 @@ class ClienteAPIView(APIView):
 
     def get(self, request):
         cliente = Cliente.objects.all()
-        #serializer = ClienteSerializer(cliente, many=True)
+       # serializer = ClienteSerializer(cliente, many=True)
         return Response({'cliente':cliente})
         
 class ClienteDetailAPIView(APIView):
@@ -36,3 +36,4 @@ class ClienteDetailAPIView(APIView):
             return Response({'serializer': serializer, 'cliente': cliente})
         serializer.save()
         return redirect('cliente-list')
+

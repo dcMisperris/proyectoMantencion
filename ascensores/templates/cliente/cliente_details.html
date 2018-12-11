@@ -1,18 +1,12 @@
 {% load rest_framework %}
 
 <html>
-<head>
-	<link rel="manifest" href="{% static 'login/manifest.json' %}">
-</head>
 <body>
-
-  <h1>Cliente - {{ cliente.nombre }}</h1>
-
-  <form action="{% url 'cliente-details' pk=cliente.pk %}" method="POST">
+  
+  <form action="{% url 'cliente-details' pk=cliente.pk%}" method="post" novalidate>
       {% csrf_token %}
-      
-      {% render_form serializer %}
-      <input type="submit" value="Save">
+      {% render_form serializer template_pack='rest_framework/vertical' %}
+      <button type="submit" class="btn btn-default">Sign in</button>
   </form>
 </body>
 </html>
