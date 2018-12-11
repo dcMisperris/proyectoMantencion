@@ -3,4 +3,4 @@ from django.http import JsonResponse
 # Create your views here.
 
 def agregarCliente(request):
-    return render(request,'cliente/agregar_cliente.html')
+    return render(request,'cliente/acliente.html')

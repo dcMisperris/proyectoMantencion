@@ -12,4 +12,4 @@ class Cliente(models.Model):
 
 
     def __str__(self):
-        return super().__str__()
+        return self.nombre

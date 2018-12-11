@@ -7,11 +7,11 @@ class UsuarioSerializer(serializers.ModelSerializer):
         fields = '__all__'
         #read_only_fields = ['id', 'correo']
 
-    def create(self, validated_data):
+    def createUsuario(self, validated_data):
         user = Usuario(
-            email=validated_data['correo'],
-            username=validated_data['nombre_compelto']
+            correo=validated_data['correo'],
+            nombre_completo=validated_data['nombre_compelto']
         )
-        user.set_password(validated_data['password'])
+        user.set_password(validated_data['contraseña'])
         user.save()
         return user

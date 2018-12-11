@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'apps.login',
     'apps.cliente',
+    'pwa',
     
 ]
 
@@ -108,6 +109,8 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     )
 }
+
+PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR,'static/login/js', 'sw.js')
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/

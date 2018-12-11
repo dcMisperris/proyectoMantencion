@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from .models import Usuario
 from apps.login.api.serializers import UsuarioSerializer
 from django.http import JsonResponse
+import json
 
 # Create your views here.
 

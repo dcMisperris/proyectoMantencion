@@ -5,8 +5,8 @@ from django.conf.urls import include
 
 
 urlpatterns = [
-    path('apicliente/', views.ClienteAPIView.as_view()),
-    path('apicliente/<int:pk>/', views.ClienteDetailAPIView.as_view()),
+    path('apicliente/', views.ClienteAPIView.as_view(),name='cliente-list'),
+    path('apicliente/<int:pk>/', views.ClienteDetailAPIView.as_view(),name='cliente-details'),
     path('clienteapi-auth/', include('rest_framework.urls')),
 ]
 

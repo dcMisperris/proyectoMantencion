@@ -1,0 +1,14 @@
+{% load rest_framework %}
+
+<html><body>
+
+  <h1>Cliente - {{ cliente.nombre }}</h1>
+
+  <form action="{% url 'cliente-details' pk=cliente.pk %}" method="POST">
+      {% csrf_token %}
+      
+      {% render_form serializer %}
+      <input type="submit" value="Save">
+  </form>
+</body>
+</html>

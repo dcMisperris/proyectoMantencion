@@ -22,4 +22,5 @@ urlpatterns = [
     path('',include('apps.login.urls')),
     path('',include('apps.cliente.urls')),
     path('',include('apps.cliente.api.urls')),
+    path('',include('pwa.urls')),
 ]
