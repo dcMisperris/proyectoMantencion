@@ -1,6 +1,10 @@
 {% load rest_framework %}
 
-<html><body>
+<html>
+<head>
+	<link rel="manifest" href="{% static 'login/manifest.json' %}">
+</head>
+<body>
 
   <h1>Cliente - {{ cliente.nombre }}</h1>
 

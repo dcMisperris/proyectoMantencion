@@ -10,3 +10,7 @@ import json
 
 def homepage (request):
     return render(request,'login/login.html')
+
+def base_layout(request):
+	template='login/base.html'
+	return render(request,template)    
