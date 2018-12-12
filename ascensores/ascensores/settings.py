@@ -43,8 +43,63 @@ INSTALLED_APPS = [
     'apps.login',
     'apps.cliente',
     'pwa',
+    'apps.orden',
+    #SOCIAL AUTH
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.facebook',
+    #SITES
+    'django.contrib.sites',
     
 ]
+
+SITE_ID = 1
+
+# SETTINGS DE ALLAUTH SOCIAL LOGIN
+
+AUTHENTICATION_BACKENDS = (
+    # Necesario para logear por username en Django admin, sin importar allauth
+    'django.contrib.auth.backends.ModelBackend',
+    
+    # Metodo de autenticación especifico de allauth, como logear por email
+   'allauth.account.auth_backends.AuthenticationBackend',
+
+   #'social_core.backends.facebook.FacebookOAuth2', #otro social login
+)
+
+ACCOUNT_EMAIL_VERIFICATION = "none" #ALLAUTH No necesita verificacion de email
+SOCIALACCOUNT_PROVIDERS = {
+    'facebook': {
+        'METHOD': 'oauth2',
+        'SCOPE': ['email', 'public_profile', 'user_friends'],
+        'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
+        'INIT_PARAMS': {'cookie': True},
+        'FIELDS': [
+            'id',
+            'email',
+            'name',
+            'first_name',
+            'last_name',
+            'verified',
+            'locale',
+            'timezone',
+            'link',
+            'gender',
+            'updated_time',
+        ],
+        'EXCHANGE_TOKEN': True,
+        'LOCALE_FUNC': 'path.to.callable',
+        'VERIFIED_EMAIL': False,
+        'VERSION': 'v2.12',
+    }
+}
+
+SOCIAL_AUTH_FACEBOOK_KEY = '1935576376738610'
+SOCIAL_AUTH_FACEBOOK_SECRET = '16f1d24ce20c529ed163bb7eafb5eb2b'
+LOGIN_REDIRECT_URL= 'http://localhost:8000/apicliente/'
+
+################################################################
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

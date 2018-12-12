@@ -8,8 +8,8 @@ $('.btnlogin').click( function() {
                     if($('#correo').val() == element.correo){
                         // alert("correo encontrado");
                         f = true;
-                        window.location.replace("http://localhost:8000/usuario/" + element.id)
-
+                        window.location.replace("http://localhost:8000/cliente/registro/")
+                       
                     }
                     else{
                         if(f=false) {

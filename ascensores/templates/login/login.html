@@ -7,11 +7,12 @@
     {% load pwa %}
     <meta charset="utf-8">
     {% progressive_web_app_meta %}
+    {% load socialaccount %}
     <title>Login</title>
     <link rel="stylesheet" type="text/css" media="screen" href="{% static 'login/css/styles.css' %}" />
     <script type="text/javascript" src="{% static 'login/js/serviceworker.js' %} "></script>
     
-    <link rel="manifest" href="/manifest.json">
+    <!-- <link rel="manifest" href="/manifest.json"> -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -34,6 +35,12 @@
         <button type="submit" class="btnlogin"> log in<br><br>
         <a href="#">Lost your Password?</a><br>
         <a href="#">Don't have An account?</a>
+        <br> 
+        <!-- Social AUTH -->
+        <a class="btn btn-primary btn-block" href="{% provider_login_url "facebook" method="oauth2" %}">
+            <span class="fab fa-facebook"></span>
+           
+            iniciar con fb</a>
       </form>
       <script type="text/javascript" src="{% static 'login/js/main.js' %}"></script>
     </div>

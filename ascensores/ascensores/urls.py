@@ -18,9 +18,13 @@ from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api-auth/', include('rest_framework.urls')),
     path('',include('apps.login.api.urls')),
     path('',include('apps.login.urls')),
     path('',include('apps.cliente.urls')),
     path('',include('apps.cliente.api.urls')),
     path('',include('pwa.urls')),
+    path('accounts/', include('allauth.urls')),
+    path('accounts/profile/', include('apps.cliente.api.urls')),
+    path('',include('apps.orden.api.urls')),
 ]

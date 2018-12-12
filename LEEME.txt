@@ -1,0 +1,64 @@
+LEEME.txt
+
+Para iniciar el proyecto de mantención de ascensores tiene que cumplir los requisitos que se dictan a continuación:
+
+	-----------PRIMERO---------------
+
+	--instalar la version 3.7 de python
+	--Abrir una nueva terminal--
+	--instalar virtualenv--
+	--pip install virtualenv--
+	--crear una carpeta para alojar nuestro proyecto--
+		para este ejemplo:
+
+			~: mkdir mantencion
+			~: cd mantencion
+			~: virtualenv env
+			~: source env/bin/activate  >>>> en OS X esto me activa el 		   entorno virtual debe aparecer (env) 
+			(env)~: descomprimir la carpeta con el proyecto ascensor
+			(env)~: cd ascensor >>> entramos a la carpeta raiz del proyecto djagno
+			(env)~: pip install -r requerimientos.txt >>>>instalara todos las librerias necesarias para el proyecto
+			~: ls >>>>
+			(env)~:python manage.py makemigrations
+			(env)~:python manage.py migrate
+			(env)~: python manage.py createsuperuser >>>> hay que rellenar los campos solicitados y recordarlos ya que creara un super usuario necesario para ingresar al admin de django.
+			(env)~: python manage.py runserver >> iniciara nuestro proyecto
+
+    ----------EN EL NAVEGADOR-----------
+
+    ahora en nuestro navegador vamos a la direccion:
+    http://localhost:8000/index
+	
+    y ya esta arriba nuestro proyecto.
+
+urls :
+
+(
+	http://localhost:8000/apicliente ------> nos entrega una lista de todos los clientes agregados al momento
+
+	http://localhost:8000/apicliente/pk ---> donde pk del 1 al 4 muestra en detalle un cliente
+
+	http://localhost:8000/cliente/registro ------> nos entrega una vista de el administrador donde puede agregar nuevos clientes
+
+	http://localhost:8000/usuario/ -->> nos entrega una lista de los usuarios del modelo usuarios de la app login
+
+	http://localhost:8000/usuario/pk --> donde pk es la id de usuario entonces nos muestra un usuario especifico ejemplo pk=1
+
+	http://localhost:8000/api-auth/ --> login de django_rest 
+	
+	http://localhost:8000/orden-api/ ---> crea y lista las ordenes 
+
+	
+
+
+)    
+
+/////
+
+Creadores :
+
+	Nicolás Carreño
+	Alexis Sandoval
+	Georgie Valdivia 
+
+/////
